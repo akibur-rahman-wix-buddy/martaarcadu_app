@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -40,9 +42,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void _onNext() {
     if (_currentPage < slides.length - 1) {
       _controller.nextPage(
-          duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
     } else {
-      // Navigate to login or home screen
+      // ✅ Navigate to the next screen when "Get Started" is tapped
+      NavigationService.navigateTo(Routes.loginScreen);
     }
   }
 

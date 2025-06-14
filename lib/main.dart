@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:martaarcadu_app/features/auth/forget_password/presentation/forget_password_screen.dart';
-import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
@@ -84,7 +82,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: ForgetPasswordScreen(),
+            home: OnboardingScreen(),
           ),
         );
       },
