@@ -9,16 +9,18 @@ import 'package:martaarcadu_app/helpers/all_routes.dart';
 import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
-class ForgetPasswordScreen extends StatefulWidget {
-  const ForgetPasswordScreen({super.key});
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({super.key});
 
   @override
-  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
+  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
 }
 
-class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
-  final TextEditingController _emailController = TextEditingController();
-
+class _NewPasswordScreenState extends State<NewPasswordScreen> {
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmpasswordController =
+      TextEditingController();
+  bool _obscurePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,27 +44,57 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 ),
                 UIHelper.verticalSpace(32.h),
                 Text(
-                  'Forget Password',
+                  'New Password',
                   style:
                       TextFontStyle.textStylec24c00121AManropeW600.copyWith(),
                 ),
                 UIHelper.verticalSpace(4.h),
                 Text(
-                  'Enter your email to reset your password and get back to making change',
+                  'Create a new password to continue your journey with (Appname)',
                   style:
                       TextFontStyle.textStylec14c808080ManropeW500.copyWith(),
                 ),
                 UIHelper.verticalSpace(40.h),
                 CommonTextFormField(
-                  label: 'Email Address',
-                  hintText: 'Enter your email',
-                  controller: _emailController,
+                  label: 'Password',
+                  hintText: '*************',
+                  controller: _passwordController,
+                  obscureText: _obscurePassword,
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                      color: AppColors.c808080,
+                    ),
+                    onPressed: () {
+                      setState(() => _obscurePassword = !_obscurePassword);
+                    },
+                  ),
+                ),
+                UIHelper.verticalSpace(16.h),
+                CommonTextFormField(
+                  label: 'Confirm Password',
+                  hintText: '*************',
+                  controller: _confirmpasswordController,
+                  obscureText: _obscurePassword,
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                      color: AppColors.c808080,
+                    ),
+                    onPressed: () {
+                      setState(() => _obscurePassword = !_obscurePassword);
+                    },
+                  ),
                 ),
                 UIHelper.verticalSpace(40.h),
                 CommonButton(
                   text: 'Continue',
                   onPressed: () {
-                    NavigationService.navigateTo(Routes.otpVerifyScreen);
+                    NavigationService.navigateTo(Routes.loginScreen);
                   },
                 ),
               ],

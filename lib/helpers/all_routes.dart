@@ -1,6 +1,12 @@
 // ignore_for_file: unused_element
 
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:martaarcadu_app/features/auth/forget_password/presentation/forget_password_screen.dart';
+import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
+import 'package:martaarcadu_app/features/auth/new_password/new_password_screen.dart';
+import 'package:martaarcadu_app/features/auth/otp_verify/otp_verify_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -50,6 +56,10 @@ final class Routes {
   static const String setting = '/setting';
   static const String contentCategories = '/content_categories';
   static const String reminderScreen = '/reminders_screen';
+  static const String forgotPasswordScreen = '/forgot_password_screen';
+  static const String otpVerifyScreen = '/otp_verify_screen';
+  static const String newPasswordScreen = '/new_password_screen';
+  static const String loginScreen = '/loginScreen';
 }
 
 final class RouteGenerator {
@@ -59,10 +69,25 @@ final class RouteGenerator {
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case Routes.signUpScreen:
-      //   return Platform.isAndroid
-      //       ? _FadedTransitionRoute(widget: SignUpScreen(), settings: settings)
-      //       : CupertinoPageRoute(builder: (context) => SignUpScreen());
+      case Routes.forgotPasswordScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: ForgetPasswordScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => ForgetPasswordScreen());
+      case Routes.otpVerifyScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: OtpVerifyScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => OtpVerifyScreen());
+      case Routes.newPasswordScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: NewPasswordScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => NewPasswordScreen());
+      case Routes.loginScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(widget: LoginScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => LoginScreen());
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
