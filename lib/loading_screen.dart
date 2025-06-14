@@ -1,12 +1,11 @@
+
 // import 'package:flutter/material.dart';
 // import 'constants/app_constants.dart';
-
 // import 'helpers/di.dart';
 // import 'helpers/helper_methods.dart';
 // import 'helpers/post_login.dart';
 // import 'networks/dio/dio.dart';
 // import 'welcome_screen.dart';
-
 
 // final class Loading extends StatefulWidget {
 //   const Loading({super.key});
@@ -22,11 +21,9 @@
 //   @override
 //   void initState() {
 //     loadInitialData();
-  
+
 //     super.initState();
 //   }
-
-
 
 //   loadInitialData() async {
 //     //AutoAppUpdateUtil.instance.checkAppUpdate();
@@ -49,11 +46,11 @@
 //     if (_isLoading) {
 //       return const WelcomeScreen();
 //     } else {
-//       return appData.read(kKeyIsLoggedIn)
-//           ? const HomeScreen()
+//       return appData.read(kKeyCustomerID) != null
+//           ? const NavigationScreen()
 //           : appData.read(kKeyfirstTime)
-//               ? const HomeScreen()
-//               : const HomeScreen();
+//               ? const OnboardingScreen()
+//               : const LoginScreen();
 //     }
 //   }
 // }
