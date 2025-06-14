@@ -12,38 +12,249 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/forward_button.png
-  AssetGenImage get forwardButton =>
-      const AssetGenImage('assets/icons/forward_button.png');
+  /// File path: assets/icons/add_icon.png
+  AssetGenImage get addIcon => const AssetGenImage('assets/icons/add_icon.png');
 
-  /// File path: assets/icons/logo.png
-  AssetGenImage get logo => const AssetGenImage('assets/icons/logo.png');
+  /// File path: assets/icons/app_version_icon.png
+  AssetGenImage get appVersionIcon =>
+      const AssetGenImage('assets/icons/app_version_icon.png');
 
-  /// File path: assets/icons/notification_icon.png
-  AssetGenImage get notificationIcon =>
-      const AssetGenImage('assets/icons/notification_icon.png');
+  /// File path: assets/icons/arrow_back_icon (2).png
+  AssetGenImage get arrowBackIcon2 =>
+      const AssetGenImage('assets/icons/arrow_back_icon (2).png');
+
+  /// File path: assets/icons/camera_icon.png
+  AssetGenImage get cameraIcon =>
+      const AssetGenImage('assets/icons/camera_icon.png');
+
+  /// File path: assets/icons/deals_icon.png
+  AssetGenImage get dealsIcon =>
+      const AssetGenImage('assets/icons/deals_icon.png');
+
+  /// File path: assets/icons/delete_icon (2).png
+  AssetGenImage get deleteIcon2 =>
+      const AssetGenImage('assets/icons/delete_icon (2).png');
+
+  /// File path: assets/icons/dollar_icon.png
+  AssetGenImage get dollarIcon =>
+      const AssetGenImage('assets/icons/dollar_icon.png');
+
+  /// File path: assets/icons/email.icon.png
+  AssetGenImage get emailIcon =>
+      const AssetGenImage('assets/icons/email.icon.png');
+
+  /// File path: assets/icons/empty_message_icon.png
+  AssetGenImage get emptyMessageIcon =>
+      const AssetGenImage('assets/icons/empty_message_icon.png');
+
+  /// File path: assets/icons/home_icon.png
+  AssetGenImage get homeIcon =>
+      const AssetGenImage('assets/icons/home_icon.png');
+
+  /// File path: assets/icons/home_screen_active_service_icon.png
+  AssetGenImage get homeScreenActiveServiceIcon =>
+      const AssetGenImage('assets/icons/home_screen_active_service_icon.png');
+
+  /// File path: assets/icons/home_screen_cleaning_icon.png
+  AssetGenImage get homeScreenCleaningIcon =>
+      const AssetGenImage('assets/icons/home_screen_cleaning_icon.png');
+
+  /// File path: assets/icons/home_screen_help_icon.png
+  AssetGenImage get homeScreenHelpIcon =>
+      const AssetGenImage('assets/icons/home_screen_help_icon.png');
+
+  /// File path: assets/icons/location_icon.png
+  AssetGenImage get locationIcon =>
+      const AssetGenImage('assets/icons/location_icon.png');
+
+  /// File path: assets/icons/lock_icon.png
+  AssetGenImage get lockIcon =>
+      const AssetGenImage('assets/icons/lock_icon.png');
+
+  /// File path: assets/icons/logout_icon.png
+  AssetGenImage get logoutIcon =>
+      const AssetGenImage('assets/icons/logout_icon.png');
+
+  /// File path: assets/icons/menu_icon.png
+  AssetGenImage get menuIcon =>
+      const AssetGenImage('assets/icons/menu_icon.png');
+
+  /// File path: assets/icons/message_icon.png
+  AssetGenImage get messageIcon =>
+      const AssetGenImage('assets/icons/message_icon.png');
+
+  /// File path: assets/icons/notification_bell_icon.png
+  AssetGenImage get notificationBellIcon =>
+      const AssetGenImage('assets/icons/notification_bell_icon.png');
+
+  /// File path: assets/icons/privacy_icon.png
+  AssetGenImage get privacyIcon =>
+      const AssetGenImage('assets/icons/privacy_icon.png');
+
+  /// File path: assets/icons/product_details_screen_favorite_icon.png
+  AssetGenImage get productDetailsScreenFavoriteIcon => const AssetGenImage(
+    'assets/icons/product_details_screen_favorite_icon.png',
+  );
+
+  /// File path: assets/icons/product_details_screen_seller_icon.png
+  AssetGenImage get productDetailsScreenSellerIcon => const AssetGenImage(
+    'assets/icons/product_details_screen_seller_icon.png',
+  );
+
+  /// File path: assets/icons/product_icon.png
+  AssetGenImage get productIcon =>
+      const AssetGenImage('assets/icons/product_icon.png');
+
+  /// File path: assets/icons/push_notification_icon.png
+  AssetGenImage get pushNotificationIcon =>
+      const AssetGenImage('assets/icons/push_notification_icon.png');
+
+  /// File path: assets/icons/response_seller_screen_map_icon.png
+  AssetGenImage get responseSellerScreenMapIcon =>
+      const AssetGenImage('assets/icons/response_seller_screen_map_icon.png');
+
+  /// File path: assets/icons/seeting_icon.png
+  AssetGenImage get seetingIcon =>
+      const AssetGenImage('assets/icons/seeting_icon.png');
+
+  /// File path: assets/icons/send_icon.png
+  AssetGenImage get sendIcon =>
+      const AssetGenImage('assets/icons/send_icon.png');
+
+  /// File path: assets/icons/terms_icon.png
+  AssetGenImage get termsIcon =>
+      const AssetGenImage('assets/icons/terms_icon.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [forwardButton, logo, notificationIcon];
+  List<AssetGenImage> get values => [
+    addIcon,
+    appVersionIcon,
+    arrowBackIcon2,
+    cameraIcon,
+    dealsIcon,
+    deleteIcon2,
+    dollarIcon,
+    emailIcon,
+    emptyMessageIcon,
+    homeIcon,
+    homeScreenActiveServiceIcon,
+    homeScreenCleaningIcon,
+    homeScreenHelpIcon,
+    locationIcon,
+    lockIcon,
+    logoutIcon,
+    menuIcon,
+    messageIcon,
+    notificationBellIcon,
+    privacyIcon,
+    productDetailsScreenFavoriteIcon,
+    productDetailsScreenSellerIcon,
+    productIcon,
+    pushNotificationIcon,
+    responseSellerScreenMapIcon,
+    seetingIcon,
+    sendIcon,
+    termsIcon,
+  ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/error_image.png
-  AssetGenImage get errorImage =>
-      const AssetGenImage('assets/images/error_image.png');
+  /// File path: assets/images/close_request_screen_image.png
+  AssetGenImage get closeRequestScreenImage =>
+      const AssetGenImage('assets/images/close_request_screen_image.png');
 
-  /// File path: assets/images/onboadring.png
-  AssetGenImage get onboadring =>
-      const AssetGenImage('assets/images/onboadring.png');
+  /// File path: assets/images/favorite_screen_image1.png
+  AssetGenImage get favoriteScreenImage1 =>
+      const AssetGenImage('assets/images/favorite_screen_image1.png');
 
-  /// File path: assets/images/placeholder_image.jpeg
-  AssetGenImage get placeholderImage =>
-      const AssetGenImage('assets/images/placeholder_image.jpeg');
+  /// File path: assets/images/favorite_seller_screen_image2.png
+  AssetGenImage get favoriteSellerScreenImage2 =>
+      const AssetGenImage('assets/images/favorite_seller_screen_image2.png');
+
+  /// File path: assets/images/home_screen_product_image1.png
+  AssetGenImage get homeScreenProductImage1 =>
+      const AssetGenImage('assets/images/home_screen_product_image1.png');
+
+  /// File path: assets/images/message_screen_image1.png
+  AssetGenImage get messageScreenImage1 =>
+      const AssetGenImage('assets/images/message_screen_image1.png');
+
+  /// File path: assets/images/message_screen_image2.png
+  AssetGenImage get messageScreenImage2 =>
+      const AssetGenImage('assets/images/message_screen_image2.png');
+
+  /// File path: assets/images/onboarding_screen_image1.png
+  AssetGenImage get onboardingScreenImage1 =>
+      const AssetGenImage('assets/images/onboarding_screen_image1.png');
+
+  /// File path: assets/images/onboarding_screen_image2.png
+  AssetGenImage get onboardingScreenImage2 =>
+      const AssetGenImage('assets/images/onboarding_screen_image2.png');
+
+  /// File path: assets/images/onboarding_screen_image3.png
+  AssetGenImage get onboardingScreenImage3 =>
+      const AssetGenImage('assets/images/onboarding_screen_image3.png');
+
+  /// File path: assets/images/post_product_screen_image1.png
+  AssetGenImage get postProductScreenImage1 =>
+      const AssetGenImage('assets/images/post_product_screen_image1.png');
+
+  /// File path: assets/images/post_product_screen_image2.png
+  AssetGenImage get postProductScreenImage2 =>
+      const AssetGenImage('assets/images/post_product_screen_image2.png');
+
+  /// File path: assets/images/post_request_screen_image.png
+  AssetGenImage get postRequestScreenImage =>
+      const AssetGenImage('assets/images/post_request_screen_image.png');
+
+  /// File path: assets/images/profile_screen_image1.png
+  AssetGenImage get profileScreenImage1 =>
+      const AssetGenImage('assets/images/profile_screen_image1.png');
+
+  /// File path: assets/images/profile_screen_image2.png
+  AssetGenImage get profileScreenImage2 =>
+      const AssetGenImage('assets/images/profile_screen_image2.png');
+
+  /// File path: assets/images/request_seller_screen.png
+  AssetGenImage get requestSellerScreen =>
+      const AssetGenImage('assets/images/request_seller_screen.png');
+
+  /// File path: assets/images/service_complete_screen_image1.png
+  AssetGenImage get serviceCompleteScreenImage1 =>
+      const AssetGenImage('assets/images/service_complete_screen_image1.png');
+
+  /// File path: assets/images/service_complete_screen_image2.png
+  AssetGenImage get serviceCompleteScreenImage2 =>
+      const AssetGenImage('assets/images/service_complete_screen_image2.png');
+
+  /// File path: assets/images/sucessfully_create_account_screen_image.png
+  AssetGenImage get sucessfullyCreateAccountScreenImage => const AssetGenImage(
+    'assets/images/sucessfully_create_account_screen_image.png',
+  );
 
   /// List of all assets
-  List<AssetGenImage> get values => [errorImage, onboadring, placeholderImage];
+  List<AssetGenImage> get values => [
+    closeRequestScreenImage,
+    favoriteScreenImage1,
+    favoriteSellerScreenImage2,
+    homeScreenProductImage1,
+    messageScreenImage1,
+    messageScreenImage2,
+    onboardingScreenImage1,
+    onboardingScreenImage2,
+    onboardingScreenImage3,
+    postProductScreenImage1,
+    postProductScreenImage2,
+    postRequestScreenImage,
+    profileScreenImage1,
+    profileScreenImage2,
+    requestSellerScreen,
+    serviceCompleteScreenImage1,
+    serviceCompleteScreenImage2,
+    sucessfullyCreateAccountScreenImage,
+  ];
 }
 
 class $AssetsLottieGen {
@@ -121,34 +332,34 @@ class $AssetsLottieGen {
 
   /// List of all assets
   List<String> get values => [
-        wedeAnimation,
-        addToCart,
-        birdRing,
-        cartIsEmpty,
-        emptyScreen,
-        favourite,
-        hamburger,
-        imageShimmer,
-        itemNotFound,
-        loading,
-        loadingIcecream,
-        loadingSpinner,
-        loadingSpinnerAlt,
-        lottieFoodLoading,
-        lottieListLoading,
-        lottieRoundFoodLoading,
-        notFound,
-        rating,
-        removeFromCart,
-        restaurantLoading,
-        success,
-        success1,
-        waiting
-      ];
+    wedeAnimation,
+    addToCart,
+    birdRing,
+    cartIsEmpty,
+    emptyScreen,
+    favourite,
+    hamburger,
+    imageShimmer,
+    itemNotFound,
+    loading,
+    loadingIcecream,
+    loadingSpinner,
+    loadingSpinnerAlt,
+    lottieFoodLoading,
+    lottieListLoading,
+    lottieRoundFoodLoading,
+    notFound,
+    rating,
+    removeFromCart,
+    restaurantLoading,
+    success,
+    success1,
+    waiting,
+  ];
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
@@ -156,11 +367,7 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  });
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
 
@@ -188,7 +395,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {
@@ -220,15 +427,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;

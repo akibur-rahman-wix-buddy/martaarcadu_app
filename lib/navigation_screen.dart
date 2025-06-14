@@ -1,21 +1,18 @@
+
 // import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:analyticsdepart_app/features/cart_screens_flow/cart/presentation/cart_screen.dart';
-// import 'package:analyticsdepart_app/features/home_screens_flow/home/presentation/home_screen.dart';
-// import 'package:analyticsdepart_app/gen/assets.gen.dart';
-// import 'package:analyticsdepart_app/gen/colors.gen.dart';
+// import 'package:martaarcadu_app/gen/assets.gen.dart';
+// import 'package:martaarcadu_app/gen/colors.gen.dart';
+
 // import 'helpers/helper_methods.dart';
 
-// // Placeholder Screens (Remove if you already have them)
-// class SearchScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) => Center(child: Text("Search Screen"));
-// }
+// /// Placeholder Screens
+// // class SearchScreen extends StatelessWidget {
+// //   const SearchScreen({super.key});
 
-// class ProfileScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) => Center(child: Text("Profile Screen"));
-// }
+// //   @override
+// //   Widget build(BuildContext context) => Center(child: Text("Search Screen"));
+// // }
 
 // class NavigationScreen extends StatefulWidget {
 //   final Widget? pageNum;
@@ -30,10 +27,10 @@
 //   bool _isFirstBuild = true;
 
 //   final List<Widget> _screens = [
-//     HomeScreen(),
-//     SearchScreen(),
-//     CartScreen(),
-//     ProfileScreen(),
+//     // HomeScreen(),
+//     // SearchProduct(),
+//     // CartScreen(),
+//     // ProfileScreen()
 //   ];
 
 //   @override
@@ -54,10 +51,10 @@
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return PopScope(
-//       canPop: false,
-//       onPopInvokedWithResult: (bool didPop, _) async {
-//         showMaterialDialog(context);
+//     return WillPopScope(
+//       onWillPop: () async {
+//         showMaterialDialog(context); // custom exit dialog
+//         return false;
 //       },
 //       child: Scaffold(
 //         backgroundColor: Colors.white,
@@ -84,65 +81,34 @@
 //             elevation: 0,
 //             backgroundColor: Colors.transparent,
 //             currentIndex: _currentIndex,
-//             onTap: (index) {
-//               setState(() {
-//                 _currentIndex = index;
-//               });
-//             },
+//             onTap: (index) => setState(() => _currentIndex = index),
 //             type: BottomNavigationBarType.fixed,
 //             selectedItemColor: AppColors.c55AE5B,
 //             unselectedItemColor: AppColors.c838383,
 //             selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
 //             unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w400),
 //             items: [
-//               BottomNavigationBarItem(
-//                 icon: Image.asset(
-//                   Assets.icons.homeIcon.path,
-//                   height: 24.h,
-//                   width: 24.w,
-//                   color: _currentIndex == 0
-//                       ? AppColors.c55AE5B
-//                       : AppColors.c838383,
-//                 ),
-//                 label: "Home",
-//               ),
-//               BottomNavigationBarItem(
-//                 icon: Image.asset(
-//                   Assets.icons.searchIcon.path,
-//                   height: 24.h,
-//                   width: 24.w,
-//                   color: _currentIndex == 1
-//                       ? AppColors.c55AE5B
-//                       : AppColors.c838383,
-//                 ),
-//                 label: "Search",
-//               ),
-//               BottomNavigationBarItem(
-//                 icon: Image.asset(
-//                   Assets.icons.shoppingIcon.path,
-//                   height: 24.h,
-//                   width: 24.w,
-//                   color: _currentIndex == 2
-//                       ? AppColors.c55AE5B
-//                       : AppColors.c838383,
-//                 ),
-//                 label: "Cart",
-//               ),
-//               BottomNavigationBarItem(
-//                 icon: Image.asset(
-//                   Assets.icons.personIcon.path,
-//                   height: 24.h,
-//                   width: 24.w,
-//                   color: _currentIndex == 3
-//                       ? AppColors.c55AE5B
-//                       : AppColors.c838383,
-//                 ),
-//                 label: "Profile",
-//               ),
+//               _buildNavItem(Assets.icons.homeIcon.path, "Home", 0),
+//               _buildNavItem(Assets.icons.searchIcon.path, "Search", 1),
+//               _buildNavItem(Assets.icons.shoppingIcon.path, "Cart", 2),
+//               _buildNavItem(Assets.icons.personIcon.path, "Profile", 3),
 //             ],
 //           ),
 //         ),
 //       ),
+//     );
+//   }
+
+//   BottomNavigationBarItem _buildNavItem(
+//       String iconPath, String label, int index) {
+//     return BottomNavigationBarItem(
+//       icon: Image.asset(
+//         iconPath,
+//         height: 24.h,
+//         width: 24.w,
+//         color: _currentIndex == index ? AppColors.c55AE5B : AppColors.c838383,
+//       ),
+//       label: label,
 //     );
 //   }
 // }

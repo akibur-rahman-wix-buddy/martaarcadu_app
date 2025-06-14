@@ -1,8 +1,9 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:martaarcadu_app/constants/text_font_style.dart';
+// import 'package:martaarcadu_app/gen/colors.gen.dart';
 
-// import '../gen/colors.gen.dart'; // Assuming this is the correct path to your generated AppColors
+//  // Assuming this is the correct path to your generated AppColors
 //  // Assuming this is the correct path to your TextFontStyle
 
 // class AppTheme {
