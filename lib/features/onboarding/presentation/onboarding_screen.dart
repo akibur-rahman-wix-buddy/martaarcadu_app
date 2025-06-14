@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
+import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -15,22 +18,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<Map<String, String>> slides = [
     {
-      'image': Assets.images.onboardingScreenImage1.path, // ← .path here
+      'image': Assets.images.onboardingScreenImage1.path,
       'title': 'Welcome to (AppName)',
       'subtitle':
           'Get what you need, your way. Connect with services that match your request.'
     },
     {
       'image': Assets.images.onboardingScreenImage2.path,
-      'title': 'Sellers Compete, You Choose the Best',
+      'title': 'Sellers Compete,\nYou Choose the Best',
       'subtitle':
           'Create a request, and let sellers offer their best solutions. You set the price!'
     },
     {
       'image': Assets.images.onboardingScreenImage3.path,
-      'title': 'Join a Growing Service-Based Community',
+      'title': 'Join a Growing Service-\nBased Community',
       'subtitle':
-          'Be a part of our growing community Whether youre buying or selling find what you need'
+          'Be a part of our growing community! Whether you\'re buying or selling, find what you need'
     },
   ];
 
@@ -39,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _controller.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     } else {
-      // Go to home/login screen
+      // Navigate to login or home screen
     }
   }
 
@@ -50,11 +53,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.cFFFFFF,
       body: SafeArea(
         child: Column(
           children: [
-            // Slider
             Expanded(
               child: PageView.builder(
                 controller: _controller,
@@ -65,24 +67,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 itemBuilder: (_, index) {
                   final slide = slides[index];
                   return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 24.w),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: UIHelper.kDefaulutPadding()),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 40.h),
-                        Image.asset(slide['image']!, height: 250.h),
-                        SizedBox(height: 48.h),
+                        UIHelper.verticalSpace(97.h),
+                        Image.asset(slide['image']!, height: 325.h),
+                        UIHelper.verticalSpace(3.h),
                         Text(
                           slide['title']!,
-                          style: TextStyle(
-                              fontSize: 22.sp, fontWeight: FontWeight.w600),
+                          style: TextFontStyle.textStylec24c212121ManropeW700,
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 16.h),
+                        UIHelper.verticalSpace(10.h),
                         Text(
                           slide['subtitle']!,
-                          style: TextStyle(
-                              fontSize: 14.sp, color: Colors.grey[600]),
+                          style: TextFontStyle.textStylec14c808080ManropeW500,
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -91,8 +92,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
               ),
             ),
-
-            // Page indicator
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
@@ -104,63 +103,63 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   width: _currentPage == index ? 24 : 6,
                   decoration: BoxDecoration(
                     color: _currentPage == index
-                        ? Colors.blue
-                        : Colors.grey.shade400,
+                        ? AppColors.c3B82F6
+                        : AppColors.cF4F4F4,
                     borderRadius: BorderRadius.circular(3),
                   ),
                 ),
               ),
             ),
-
-            SizedBox(height: 32.h),
-
-            // Bottom buttons
+            UIHelper.verticalSpace(72.h),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              padding:
+                  EdgeInsets.symmetric(horizontal: UIHelper.kDefaulutPadding()),
               child: Row(
                 children: [
-                  // Skip
-                  Expanded(
-                    child: OutlinedButton(
-                      onPressed: _onSkip,
-                      style: OutlinedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(vertical: 14.h),
-                        side: BorderSide(color: Colors.grey.shade300),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12.r),
+                  if (_currentPage != slides.length - 1)
+                    Expanded(
+                      child: OutlinedButton(
+                        onPressed: _onSkip,
+                        style: OutlinedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 16.h, horizontal: 24.w),
+                          side: BorderSide(color: AppColors.cF4F4F4),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                        ),
+                        child: Text(
+                          'Skip',
+                          style: TextFontStyle.textStylec18c1B1F3BManropeW600
+                              .copyWith(color: AppColors.c3B82F6),
                         ),
                       ),
-                      child: Text(
-                        'Skip',
-                        style: TextStyle(fontSize: 16.sp, color: Colors.black),
-                      ),
                     ),
-                  ),
-                  SizedBox(width: 12.w),
-                  // Next or Get Started
+                  if (_currentPage != slides.length - 1)
+                    UIHelper.horizontalSpace(15.w),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: _onNext,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                        padding: EdgeInsets.symmetric(vertical: 14.h),
+                        backgroundColor: AppColors.c3B82F6,
+                        padding: EdgeInsets.symmetric(
+                            vertical: 16.h, horizontal: 24.w),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12.r),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
                       child: Text(
                         _currentPage == slides.length - 1
                             ? 'Get Started'
                             : 'Next',
-                        style: TextStyle(fontSize: 16.sp, color: Colors.white),
+                        style: TextFontStyle.textStylec18cFFFFFFManropeW600,
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-
-            SizedBox(height: 24.h),
+            UIHelper.verticalSpace(51.h),
           ],
         ),
       ),

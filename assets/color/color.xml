@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-c757575
+cE4E4E4
 <color name="cFFFFFF">#FFFFFFFF</color>
     <color name="c3D3D3D">#FF3D3D3D</color>
     <color name="allPrimaryColor">#FF3B82F6</color>
     <color name="c000000">#FF000000</color>
+    <color name="cD90000">#FFD90000</color>
+    <color name="cE4E4E4">#FFE4E4E4</color>
     <color name="c5792F4">#FF5792F4</color>
+    <color name="c5D5D5D">#FF5D5D5D</color>
+    <color name="c3B82F6">#FF3B82F6</color>
+    <color name="c1B1F3B">#FF1B1F3B</color>
+    <color name="c3D3D3D">#FF3D3D3D</color>
     <color name="c69B360">#FF69B360</color>
     <color name="cFBC02D">#FFFBC02D</color>
     <color name="cF5F5F5">#FFF5F5F5</color>
     <color name="cE0E0E0">#FFE0E0E0</color>
     <color name="c757575">#FF757575</color>
+     <color name="c404040">#FF404040</color>
     <color name="c212121">#FF212121</color>
     <color name="c808080">#FF808080</color>
     <color name="cF4F4F4">#FFF4F4F4</color>
