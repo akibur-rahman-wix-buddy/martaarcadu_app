@@ -12,6 +12,7 @@ class CommonTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Widget? suffixIcon;
   final TextInputType keyboardType;
+  final String? Function(String?)? validator;
 
   const CommonTextFormField({
     super.key,
@@ -22,6 +23,7 @@ class CommonTextFormField extends StatelessWidget {
     this.controller,
     this.suffixIcon,
     this.keyboardType = TextInputType.text,
+    this.validator,
   });
 
   @override
@@ -36,6 +38,7 @@ class CommonTextFormField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: keyboardType,
           textAlign: TextAlign.left,
+          validator: validator,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextFontStyle.textStylec14c868686ManropeW500,
