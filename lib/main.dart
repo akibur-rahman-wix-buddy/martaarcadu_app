@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:martaarcadu_app/features/auth/account_details/presentation/account_details_screen.dart';
 import 'package:martaarcadu_app/features/auth/create_account/presentation/create_account_screen.dart';
+import 'package:martaarcadu_app/features/auth/email_verify/presentation/emial_verify_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
@@ -84,7 +85,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: AccountDetailsScreen(),
+            home: EmialVerifyScreen(),
           ),
         );
       },
