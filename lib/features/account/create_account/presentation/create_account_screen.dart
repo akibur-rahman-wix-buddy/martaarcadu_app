@@ -6,6 +6,8 @@ import 'package:martaarcadu_app/common_widgets/common_textform_field.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/constants/validator.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class CreateAccountScreen extends StatefulWidget {
@@ -197,8 +199,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     text: 'Next',
                     onPressed: () {
                       if (_formKey.currentState?.validate() ?? false) {
-                        // Proceed with form data
-                        debugPrint("Form is valid");
+                        NavigationService.navigateTo(
+                            Routes.accountDetailsScreen);
                       }
                     },
                   ),
@@ -212,8 +214,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Replace with actual navigation route
-                          Navigator.pop(context);
+                          NavigationService.navigateTo(Routes.loginScreen);
                         },
                         child: Text(
                           ' Login',

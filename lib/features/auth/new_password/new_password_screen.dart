@@ -5,7 +5,6 @@ import 'package:martaarcadu_app/common_widgets/common_button.dart';
 import 'package:martaarcadu_app/common_widgets/common_textform_field.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/constants/validator.dart';
-import 'package:martaarcadu_app/gen/assets.gen.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
 import 'package:martaarcadu_app/helpers/all_routes.dart';
 import 'package:martaarcadu_app/helpers/navigation_service.dart';

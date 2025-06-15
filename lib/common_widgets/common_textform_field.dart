@@ -14,8 +14,8 @@ class CommonTextFormField extends StatelessWidget {
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
   final void Function(String)? onFieldSubmitted;
-   final int? maxLines;
-  final int? maxLength; // ✅ Fixed type
+  final int? maxLines;
+  final int? maxLength;
 
   const CommonTextFormField({
     super.key,
@@ -27,7 +27,9 @@ class CommonTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.keyboardType = TextInputType.text,
     this.validator,
-    this.onFieldSubmitted, this.maxLines, this.maxLength, // ✅ Included properly
+    this.onFieldSubmitted,
+    this.maxLines = 1,
+    this.maxLength,
   });
 
   @override
@@ -44,13 +46,12 @@ class CommonTextFormField extends StatelessWidget {
           textAlign: TextAlign.left,
           validator: validator,
           onFieldSubmitted: onFieldSubmitted,
-           maxLines: maxLines,
-          maxLength: maxLength, // ✅ Applied here
+          maxLines: obscureText ? 1 : maxLines,
+          maxLength: maxLength,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextFontStyle.textStylec14c868686ManropeW500,
-            contentPadding:
-                EdgeInsets.symmetric(horizontal: 13.w, vertical: 16.h),
+            contentPadding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 16.h),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(6.r),
               borderSide: const BorderSide(color: AppColors.cE4E4E4),

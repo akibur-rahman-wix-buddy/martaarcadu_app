@@ -3,6 +3,9 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:martaarcadu_app/features/account/account_details/presentation/account_details_screen.dart';
+import 'package:martaarcadu_app/features/account/accounts_sucess/presentation/account_sucess_screen.dart';
+import 'package:martaarcadu_app/features/account/email_verify/presentation/emial_verify_screen.dart';
 import 'package:martaarcadu_app/features/auth/forget_password/presentation/forget_password_screen.dart';
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
 import 'package:martaarcadu_app/features/auth/new_password/new_password_screen.dart';
@@ -60,6 +63,9 @@ final class Routes {
   static const String otpVerifyScreen = '/otp_verify_screen';
   static const String newPasswordScreen = '/new_password_screen';
   static const String loginScreen = '/loginScreen';
+  static const String accountDetailsScreen = '/account_details_screen';
+  static const String emailVerifyScreen = '/email_verify_screen';
+  static const String accountSucessScreen = '/account_sucess_screen';
 }
 
 final class RouteGenerator {
@@ -88,6 +94,21 @@ final class RouteGenerator {
         return Platform.isAndroid
             ? _FadedTransitionRoute(widget: LoginScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => LoginScreen());
+      case Routes.accountDetailsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: AccountDetailsScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => AccountDetailsScreen());
+      case Routes.emailVerifyScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: EmialVerifyScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => EmialVerifyScreen());
+      case Routes.accountSucessScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: AccountSuccessScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => AccountSuccessScreen());
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
