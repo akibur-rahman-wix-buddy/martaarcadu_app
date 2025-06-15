@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:martaarcadu_app/common_widgets/common_arrow_button.dart';
 import 'package:martaarcadu_app/common_widgets/common_button.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
@@ -63,13 +64,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                   UIHelper.verticalSpace(20.h),
 
                   /// Back Icon
-                  IconButton(
-                    icon: Image.asset(
-                      Assets.icons.arrowBackIcon2.path,
-                      height: 20.h,
-                    ),
-                    onPressed: () => Navigator.pop(context),
-                  ),
+                  CommonBackButton(),
 
                   UIHelper.verticalSpace(32.h),
 
