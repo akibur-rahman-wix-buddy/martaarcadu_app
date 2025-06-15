@@ -13,6 +13,9 @@ class CommonTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
+  final void Function(String)? onFieldSubmitted;
+   final int? maxLines;
+  final int? maxLength; // ✅ Fixed type
 
   const CommonTextFormField({
     super.key,
@@ -24,6 +27,7 @@ class CommonTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.keyboardType = TextInputType.text,
     this.validator,
+    this.onFieldSubmitted, this.maxLines, this.maxLength, // ✅ Included properly
   });
 
   @override
@@ -39,6 +43,9 @@ class CommonTextFormField extends StatelessWidget {
           keyboardType: keyboardType,
           textAlign: TextAlign.left,
           validator: validator,
+          onFieldSubmitted: onFieldSubmitted,
+           maxLines: maxLines,
+          maxLength: maxLength, // ✅ Applied here
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextFontStyle.textStylec14c868686ManropeW500,
@@ -46,15 +53,15 @@ class CommonTextFormField extends StatelessWidget {
                 EdgeInsets.symmetric(horizontal: 13.w, vertical: 16.h),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(6.r),
-              borderSide: BorderSide(color: AppColors.cE4E4E4),
+              borderSide: const BorderSide(color: AppColors.cE4E4E4),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(6.r),
-              borderSide: BorderSide(color: AppColors.cE4E4E4),
+              borderSide: const BorderSide(color: AppColors.cE4E4E4),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(6.r),
-              borderSide: BorderSide(color: AppColors.cE4E4E4),
+              borderSide: const BorderSide(color: AppColors.cE4E4E4),
             ),
             suffixIcon: suffixIcon,
           ),

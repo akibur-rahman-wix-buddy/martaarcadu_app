@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:martaarcadu_app/common_widgets/common_arrow_button.dart';
 import 'package:martaarcadu_app/common_widgets/common_button.dart';
 import 'package:martaarcadu_app/common_widgets/common_textform_field.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
@@ -37,13 +38,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   UIHelper.verticalSpace(20.h),
-                  IconButton(
-                    icon: Image.asset(
-                      Assets.icons.arrowBackIcon2.path,
-                      height: 20.h,
-                    ),
-                    onPressed: () => Navigator.pop(context),
-                  ),
+                  CommonBackButton(),
                   UIHelper.verticalSpace(32.h),
                   Text(
                     'Forget Password',
