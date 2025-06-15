@@ -4,6 +4,8 @@ import 'package:martaarcadu_app/common_widgets/common_arrow_button.dart';
 import 'package:martaarcadu_app/common_widgets/common_button.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 import 'package:pinput/pinput.dart';
@@ -127,7 +129,7 @@ class _EmialVerifyScreenState extends State<EmialVerifyScreen> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         final otp = _otpController.text;
-
+                        NavigationService.navigateTo(Routes.accountSucessScreen);
                         print("OTP submitted: $otp");
                       }
                     },
