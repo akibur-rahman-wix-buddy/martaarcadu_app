@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
+import 'package:martaarcadu_app/features/drawer/drawer_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
+import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
@@ -84,7 +86,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: HomeScreen(),
+            home: OnboardingScreen(),
           ),
         );
       },

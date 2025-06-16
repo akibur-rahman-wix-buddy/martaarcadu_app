@@ -10,6 +10,7 @@ import 'package:martaarcadu_app/features/auth/forget_password/presentation/forge
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
 import 'package:martaarcadu_app/features/auth/new_password/new_password_screen.dart';
 import 'package:martaarcadu_app/features/auth/otp_verify/otp_verify_screen.dart';
+import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -109,6 +110,11 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: AccountSuccessScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => AccountSuccessScreen());
+      case Routes.homeScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: HomeScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => HomeScreen());     
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
