@@ -47,6 +47,10 @@ class $AssetsIconsGen {
   AssetGenImage get emptyMessageIcon =>
       const AssetGenImage('assets/icons/empty_message_icon.png');
 
+  /// File path: assets/icons/help_icon.png
+  AssetGenImage get helpIcon =>
+      const AssetGenImage('assets/icons/help_icon.png');
+
   /// File path: assets/icons/home_icon.png
   AssetGenImage get homeIcon =>
       const AssetGenImage('assets/icons/home_icon.png');
@@ -58,10 +62,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home_screen_cleaning_icon.png
   AssetGenImage get homeScreenCleaningIcon =>
       const AssetGenImage('assets/icons/home_screen_cleaning_icon.png');
-
-  /// File path: assets/icons/home_screen_help_icon.png
-  AssetGenImage get homeScreenHelpIcon =>
-      const AssetGenImage('assets/icons/home_screen_help_icon.png');
 
   /// File path: assets/icons/location_icon.png
   AssetGenImage get locationIcon =>
@@ -136,10 +136,10 @@ class $AssetsIconsGen {
     dollarIcon,
     emailIcon,
     emptyMessageIcon,
+    helpIcon,
     homeIcon,
     homeScreenActiveServiceIcon,
     homeScreenCleaningIcon,
-    homeScreenHelpIcon,
     locationIcon,
     lockIcon,
     logoutIcon,
@@ -164,6 +164,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/close_request_screen_image.png
   AssetGenImage get closeRequestScreenImage =>
       const AssetGenImage('assets/images/close_request_screen_image.png');
+
+  /// File path: assets/images/coain_image.png
+  AssetGenImage get coainImage =>
+      const AssetGenImage('assets/images/coain_image.png');
 
   /// File path: assets/images/favorite_screen_image1.png
   AssetGenImage get favoriteScreenImage1 =>
@@ -237,6 +241,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     closeRequestScreenImage,
+    coainImage,
     favoriteScreenImage1,
     favoriteSellerScreenImage2,
     homeScreenProductImage1,
