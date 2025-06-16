@@ -208,7 +208,7 @@ class DrawerScreen extends StatelessWidget {
       child: Divider(
         height: 1,
         thickness: 1,
-        color: AppColors.cEBEBEB,
+        color: AppColors.cEBEBEB, 
       ),
     );
   }
