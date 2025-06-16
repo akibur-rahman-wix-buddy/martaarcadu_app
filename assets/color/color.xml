@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-cF6F6F6
+cEBEBEB
 <color name="cFFFFFF">#FFFFFFFF</color>
     <color name="c3D3D3D">#FF3D3D3D</color>
     <color name="allPrimaryColor">#FF3B82F6</color>
     <color name="c000000">#FF000000</color>
+    <color name="cEBEBEB">#FFEBEBEB</color>
     <color name="cF0F0F0">#FFF0F0F0</color>
     <color name="cF6F6F6">#FFF6F6F6</color>
     <color name="cD90000">#FFD90000</color>

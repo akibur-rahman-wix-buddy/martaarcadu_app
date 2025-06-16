@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     text: 'Login',
                     onPressed: () {
                       if (_formKey.currentState?.validate() ?? false) {
-                        // Proceed with login
+                        NavigationService.navigateTo(Routes.homeScreen);
                         debugPrint("Email: ${_emailController.text}");
                         debugPrint("Password: ${_passwordController.text}");
                       }

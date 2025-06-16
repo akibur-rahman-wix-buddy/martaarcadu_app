@@ -39,6 +39,27 @@ class $AssetsIconsGen {
   AssetGenImage get dollarIcon =>
       const AssetGenImage('assets/icons/dollar_icon.png');
 
+  /// File path: assets/icons/drawer_screen_logout_icon.png
+  AssetGenImage get drawerScreenLogoutIcon =>
+      const AssetGenImage('assets/icons/drawer_screen_logout_icon.png');
+
+  /// File path: assets/icons/drawer_screen_reability_icon.png
+  AssetGenImage get drawerScreenReabilityIcon =>
+      const AssetGenImage('assets/icons/drawer_screen_reability_icon.png');
+
+  /// File path: assets/icons/drawer_screen_service_request_icon.png
+  AssetGenImage get drawerScreenServiceRequestIcon => const AssetGenImage(
+    'assets/icons/drawer_screen_service_request_icon.png',
+  );
+
+  /// File path: assets/icons/drawer_screen_setting_icon.png
+  AssetGenImage get drawerScreenSettingIcon =>
+      const AssetGenImage('assets/icons/drawer_screen_setting_icon.png');
+
+  /// File path: assets/icons/edit_icon.png
+  AssetGenImage get editIcon =>
+      const AssetGenImage('assets/icons/edit_icon.png');
+
   /// File path: assets/icons/email.icon.png
   AssetGenImage get emailIcon =>
       const AssetGenImage('assets/icons/email.icon.png');
@@ -87,6 +108,10 @@ class $AssetsIconsGen {
   AssetGenImage get notificationBellIcon =>
       const AssetGenImage('assets/icons/notification_bell_icon.png');
 
+  /// File path: assets/icons/person_icon.png
+  AssetGenImage get personIcon =>
+      const AssetGenImage('assets/icons/person_icon.png');
+
   /// File path: assets/icons/privacy_icon.png
   AssetGenImage get privacyIcon =>
       const AssetGenImage('assets/icons/privacy_icon.png');
@@ -134,6 +159,11 @@ class $AssetsIconsGen {
     dealsIcon,
     deleteIcon2,
     dollarIcon,
+    drawerScreenLogoutIcon,
+    drawerScreenReabilityIcon,
+    drawerScreenServiceRequestIcon,
+    drawerScreenSettingIcon,
+    editIcon,
     emailIcon,
     emptyMessageIcon,
     helpIcon,
@@ -146,6 +176,7 @@ class $AssetsIconsGen {
     menuIcon,
     messageIcon,
     notificationBellIcon,
+    personIcon,
     privacyIcon,
     productDetailsScreenFavoriteIcon,
     productDetailsScreenSellerIcon,
@@ -168,6 +199,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/coain_image.png
   AssetGenImage get coainImage =>
       const AssetGenImage('assets/images/coain_image.png');
+
+  /// File path: assets/images/drawer_profile_image.png
+  AssetGenImage get drawerProfileImage =>
+      const AssetGenImage('assets/images/drawer_profile_image.png');
 
   /// File path: assets/images/favorite_screen_image1.png
   AssetGenImage get favoriteScreenImage1 =>
@@ -242,6 +277,7 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
     closeRequestScreenImage,
     coainImage,
+    drawerProfileImage,
     favoriteScreenImage1,
     favoriteSellerScreenImage2,
     homeScreenProductImage1,
