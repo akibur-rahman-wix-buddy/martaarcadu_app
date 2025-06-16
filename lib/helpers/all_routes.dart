@@ -8,9 +8,10 @@ import 'package:martaarcadu_app/features/account/accounts_sucess/presentation/ac
 import 'package:martaarcadu_app/features/account/email_verify/presentation/emial_verify_screen.dart';
 import 'package:martaarcadu_app/features/auth/forget_password/presentation/forget_password_screen.dart';
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
-import 'package:martaarcadu_app/features/auth/new_password/new_password_screen.dart';
-import 'package:martaarcadu_app/features/auth/otp_verify/otp_verify_screen.dart';
+import 'package:martaarcadu_app/features/auth/new_password/presentation/new_password_screen.dart';
+import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
+import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -67,6 +68,7 @@ final class Routes {
   static const String accountDetailsScreen = '/account_details_screen';
   static const String emailVerifyScreen = '/email_verify_screen';
   static const String accountSucessScreen = '/account_sucess_screen';
+  static const String postRequestScreen = '/post_request_screen';
 }
 
 final class RouteGenerator {
@@ -112,9 +114,13 @@ final class RouteGenerator {
             : CupertinoPageRoute(builder: (context) => AccountSuccessScreen());
       case Routes.homeScreen:
         return Platform.isAndroid
+            ? _FadedTransitionRoute(widget: HomeScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => HomeScreen());
+      case Routes.postRequestScreen:
+        return Platform.isAndroid
             ? _FadedTransitionRoute(
-                widget: HomeScreen(), settings: settings)
-            : CupertinoPageRoute(builder: (context) => HomeScreen());     
+                widget: PostRequestScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => PostRequestScreen());
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(

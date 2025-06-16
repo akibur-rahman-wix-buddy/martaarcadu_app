@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
-import 'package:martaarcadu_app/features/drawer/drawer_screen.dart';
+import 'package:martaarcadu_app/features/drawer/presentation/drawer_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/model/product_item.dart';
 import 'package:martaarcadu_app/features/home/presentation/model/service_item.dart';
 import 'package:martaarcadu_app/features/home/presentation/widgets/banner_card.dart';

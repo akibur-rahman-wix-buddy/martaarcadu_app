@@ -11,11 +11,14 @@ class CommonTextFormField extends StatelessWidget {
   final bool isPassword;
   final TextEditingController? controller;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
   final void Function(String)? onFieldSubmitted;
   final int? maxLines;
   final int? maxLength;
+  final bool readOnly;
+  final VoidCallback? onTap;
 
   const CommonTextFormField({
     super.key,
@@ -25,11 +28,14 @@ class CommonTextFormField extends StatelessWidget {
     this.isPassword = false,
     this.controller,
     this.suffixIcon,
+    this.prefixIcon,
     this.keyboardType = TextInputType.text,
     this.validator,
     this.onFieldSubmitted,
     this.maxLines = 1,
     this.maxLength,
+    this.readOnly = false,
+    this.onTap,
   });
 
   @override
@@ -43,11 +49,12 @@ class CommonTextFormField extends StatelessWidget {
           controller: controller,
           obscureText: obscureText,
           keyboardType: keyboardType,
-          textAlign: TextAlign.left,
           validator: validator,
           onFieldSubmitted: onFieldSubmitted,
           maxLines: obscureText ? 1 : maxLines,
           maxLength: maxLength,
+          readOnly: readOnly,
+          onTap: onTap,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextFontStyle.textStylec14c868686ManropeW500,
@@ -62,9 +69,10 @@ class CommonTextFormField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(6.r),
-              borderSide: const BorderSide(color: AppColors.cE4E4E4),
+              borderSide: const BorderSide(color: AppColors.c4897FF),
             ),
             suffixIcon: suffixIcon,
+            prefixIcon: prefixIcon,
           ),
         ),
       ],
