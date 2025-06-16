@@ -21,7 +21,7 @@ class AccountDetailsScreen extends StatefulWidget {
 class _AccountDetailsScreenState extends State<AccountDetailsScreen> {
   final TextEditingController _serviceController = TextEditingController();
   final TextEditingController _aboutController = TextEditingController();
-  List<String> _services = [];
+  final List<String> _services = [];
 
   File? _selectedImage;
   bool _agreedToTerms = false;
