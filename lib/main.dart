@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:martaarcadu_app/features/account/create_account/presentation/create_account_screen.dart';
 
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
 import 'package:martaarcadu_app/features/drawer/presentation/drawer_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
+import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
@@ -88,7 +90,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: RequestSuccessfullyScreen(),
+            home: HomeScreen(),
           ),
         );
       },

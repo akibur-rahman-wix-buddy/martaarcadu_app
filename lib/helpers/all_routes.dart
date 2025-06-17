@@ -12,6 +12,8 @@ import 'package:martaarcadu_app/features/auth/new_password/presentation/new_pass
 import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
+import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
+import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -69,6 +71,9 @@ final class Routes {
   static const String emailVerifyScreen = '/email_verify_screen';
   static const String accountSucessScreen = '/account_sucess_screen';
   static const String postRequestScreen = '/post_request_screen';
+  static const String requestSucessfullyScreen = '/request_sucessfully_screen';
+  static const String requestDetailsScreen = '/request_details_screen';
+  
 }
 
 final class RouteGenerator {
@@ -121,6 +126,18 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: PostRequestScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => PostRequestScreen());
+      case Routes.requestSucessfullyScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: RequestSuccessfullyScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => RequestSuccessfullyScreen());
+      case Routes.requestDetailsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: RequestDetailsScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => RequestDetailsScreen());          
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
