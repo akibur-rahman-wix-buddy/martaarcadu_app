@@ -14,6 +14,7 @@ import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
+import 'package:martaarcadu_app/features/seller_response/presentation/seller_response_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -73,6 +74,7 @@ final class Routes {
   static const String postRequestScreen = '/post_request_screen';
   static const String requestSucessfullyScreen = '/request_sucessfully_screen';
   static const String requestDetailsScreen = '/request_details_screen';
+  static const String sellerResponseScreen = '/seller_response_screen';
   
 }
 
@@ -137,7 +139,13 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: RequestDetailsScreen(), settings: settings)
             : CupertinoPageRoute(
-                builder: (context) => RequestDetailsScreen());          
+                builder: (context) => RequestDetailsScreen());
+      case Routes.sellerResponseScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: SellerResponseScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => SellerResponseScreen());                              
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
