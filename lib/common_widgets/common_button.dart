@@ -6,38 +6,75 @@ import 'package:martaarcadu_app/constants/text_font_style.dart';
 class CommonButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
+  final Widget? leadingIcon;
+  final bool isOutlined;
   final Color backgroundColor;
   final Color textColor;
   final EdgeInsetsGeometry padding;
+  final double borderRadius;
+  final TextStyle? textStyle;
 
   const CommonButton({
     super.key,
     required this.text,
     required this.onPressed,
-    this.backgroundColor = AppColors.c3B82F6, // Default button color
-    this.textColor = AppColors.cFFFFFF, // Default text color
-    this.padding = const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+    this.leadingIcon,
+    this.isOutlined = false,
+    this.backgroundColor = AppColors.c3B82F6,
+    this.textColor = AppColors.cFFFFFF,
+    this.padding = const EdgeInsets.symmetric(vertical: 14),
+    this.borderRadius = 6,
+    this.textStyle,
   });
 
   @override
   Widget build(BuildContext context) {
+    final child = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (leadingIcon != null) ...[
+          leadingIcon!,
+          SizedBox(width: 8.w),
+        ],
+        Text(
+          text,
+          style: textStyle ??
+              TextFontStyle.textStylec16c292D32ManropeW600.copyWith(
+                color: textColor,
+              ),
+        ),
+      ],
+    );
+
+    final shape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(6.r),
+    );
+
     return SizedBox(
       width: double.infinity,
       height: 50.h,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.allPrimaryColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6.r),
-          ),
-          padding: padding,
-        ),
-        child: Text(text,
-            style: TextFontStyle.textStylec16c292D32ManropeW600.copyWith(
-              color: AppColors.cFFFFFF,
-            )),
-      ),
+      child: isOutlined
+          ? OutlinedButton(
+              onPressed: onPressed,
+              style: OutlinedButton.styleFrom(
+                backgroundColor: AppColors.cEFF7FF,
+                foregroundColor: AppColors.c4897FF,
+              
+                shape: shape,
+                padding: padding,
+              ),
+              child: child,
+            )
+          : ElevatedButton(
+              onPressed: onPressed,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: backgroundColor,
+                shape: shape,
+                padding: padding,
+              ),
+              child: child,
+            ),
     );
   }
 }

@@ -4,6 +4,8 @@ import 'package:martaarcadu_app/common_widgets/common_button.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/widgets/info_row.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class RequestSuccessfullyScreen extends StatelessWidget {
@@ -143,7 +145,9 @@ class RequestSuccessfullyScreen extends StatelessWidget {
                 UIHelper.verticalSpace(36.h),
                 CommonButton(
                   text: 'Go to Home',
-                  onPressed: () {},
+                  onPressed: () {
+                    NavigationService.navigateTo(Routes.homeScreen);
+                  },
                 ),
                 UIHelper.verticalSpace(16.h),
                 GestureDetector(
@@ -155,6 +159,7 @@ class RequestSuccessfullyScreen extends StatelessWidget {
                       color: AppColors.c4897FF,
                     ),
                     textAlign: TextAlign.center,
+                    
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
