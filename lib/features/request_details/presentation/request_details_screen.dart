@@ -174,7 +174,10 @@ class RequestDetailsScreen extends StatelessWidget {
                         height: 13.h,
                         width: 13.w,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        NavigationService.navigateTo(
+                            Routes.favoriteSellerScreen);
+                      },
                     ),
                   ),
                 ],

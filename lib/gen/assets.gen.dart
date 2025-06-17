@@ -96,6 +96,9 @@ class $AssetsIconsGen {
   AssetGenImage get logoutIcon =>
       const AssetGenImage('assets/icons/logout_icon.png');
 
+  /// File path: assets/icons/map_icon.png
+  AssetGenImage get mapIcon => const AssetGenImage('assets/icons/map_icon.png');
+
   /// File path: assets/icons/menu_icon.png
   AssetGenImage get menuIcon =>
       const AssetGenImage('assets/icons/menu_icon.png');
@@ -173,6 +176,7 @@ class $AssetsIconsGen {
     locationIcon,
     lockIcon,
     logoutIcon,
+    mapIcon,
     menuIcon,
     messageIcon,
     notificationBellIcon,

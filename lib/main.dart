@@ -7,6 +7,7 @@ import 'package:martaarcadu_app/features/account/create_account/presentation/cre
 
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
 import 'package:martaarcadu_app/features/drawer/presentation/drawer_screen.dart';
+import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
