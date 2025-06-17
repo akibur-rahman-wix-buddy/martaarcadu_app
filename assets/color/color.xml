@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-c2181FF
+c6A6A6A
 <color name="cFFFFFF">#FFFFFFFF</color>
     <color name="c3D3D3D">#FF3D3D3D</color>
     <color name="allPrimaryColor">#FF3B82F6</color>
     <color name="c000000">#FF000000</color>
     <color name="cF0FDF4">#FFF0FDF4</color>
+    <color name="c6A6A6A">#FF6A6A6A</color>
+    <color name="c04B885">#FF04B885</color>
     <color name="c2181FF">#FF2181FF</color>
+    <color name="c5B5B5B">#FF5B5B5B</color>
     <color name="c34C759">#FF34C759</color>
     <color name="cEBEBEB">#FFEBEBEB</color>
     <color name="cFCD503">#FFFCD503</color>

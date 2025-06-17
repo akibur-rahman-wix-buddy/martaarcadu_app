@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
+import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class CommonButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final Widget? leadingIcon;
+  final Widget? trailingIcon;
   final bool isOutlined;
   final Color backgroundColor;
   final Color textColor;
@@ -19,6 +21,7 @@ class CommonButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.leadingIcon,
+    this.trailingIcon,
     this.isOutlined = false,
     this.backgroundColor = AppColors.c3B82F6,
     this.textColor = AppColors.cFFFFFF,
@@ -44,11 +47,15 @@ class CommonButton extends StatelessWidget {
                 color: textColor,
               ),
         ),
+        if (trailingIcon != null) ...[
+          UIHelper.horizontalSpace(10.w),
+          trailingIcon!,
+        ],
       ],
     );
 
     final shape = RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(6.r),
+      borderRadius: BorderRadius.circular(borderRadius.r),
     );
 
     return SizedBox(
@@ -60,7 +67,6 @@ class CommonButton extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                 backgroundColor: AppColors.cEFF7FF,
                 foregroundColor: AppColors.c4897FF,
-              
                 shape: shape,
                 padding: padding,
               ),
