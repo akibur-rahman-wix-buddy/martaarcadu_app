@@ -115,6 +115,10 @@ class $AssetsIconsGen {
   AssetGenImage get personIcon =>
       const AssetGenImage('assets/icons/person_icon.png');
 
+  /// File path: assets/icons/phone_icon.png
+  AssetGenImage get phoneIcon =>
+      const AssetGenImage('assets/icons/phone_icon.png');
+
   /// File path: assets/icons/privacy_icon.png
   AssetGenImage get privacyIcon =>
       const AssetGenImage('assets/icons/privacy_icon.png');
@@ -133,9 +137,17 @@ class $AssetsIconsGen {
   AssetGenImage get productIcon =>
       const AssetGenImage('assets/icons/product_icon.png');
 
+  /// File path: assets/icons/profile_person_icon.png
+  AssetGenImage get profilePersonIcon =>
+      const AssetGenImage('assets/icons/profile_person_icon.png');
+
   /// File path: assets/icons/push_notification_icon.png
   AssetGenImage get pushNotificationIcon =>
       const AssetGenImage('assets/icons/push_notification_icon.png');
+
+  /// File path: assets/icons/reability_person_icon.png
+  AssetGenImage get reabilityPersonIcon =>
+      const AssetGenImage('assets/icons/reability_person_icon.png');
 
   /// File path: assets/icons/response_seller_screen_map_icon.png
   AssetGenImage get responseSellerScreenMapIcon =>
@@ -152,6 +164,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/terms_icon.png
   AssetGenImage get termsIcon =>
       const AssetGenImage('assets/icons/terms_icon.png');
+
+  /// File path: assets/icons/whatsapp_icon.png
+  AssetGenImage get whatsappIcon =>
+      const AssetGenImage('assets/icons/whatsapp_icon.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
@@ -181,15 +197,19 @@ class $AssetsIconsGen {
     messageIcon,
     notificationBellIcon,
     personIcon,
+    phoneIcon,
     privacyIcon,
     productDetailsScreenFavoriteIcon,
     productDetailsScreenSellerIcon,
     productIcon,
+    profilePersonIcon,
     pushNotificationIcon,
+    reabilityPersonIcon,
     responseSellerScreenMapIcon,
     seetingIcon,
     sendIcon,
     termsIcon,
+    whatsappIcon,
   ];
 }
 
