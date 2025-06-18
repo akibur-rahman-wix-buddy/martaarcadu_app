@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -101,6 +103,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Reliability',
+                      () {
+                        NavigationService.navigateTo(Routes.reliabilityScreen);
+                      },
                     ),
                     _buildDivider(),
                     _buildDrawerItem(
@@ -111,6 +116,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Service Requests',
+                      () {
+                        // Add your onTap logic here
+                      },
                     ),
                     _buildDivider(),
                     _buildDrawerItem(
@@ -121,6 +129,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Message',
+                      () {
+                        // Add your onTap logic here
+                      },
                     ),
                     _buildDivider(),
                     _buildDrawerItem(
@@ -131,6 +142,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Profile',
+                      () {
+                        // Add your onTap logic here
+                      },
                     ),
                     _buildDivider(),
                     _buildDrawerItem(
@@ -141,6 +155,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Settings',
+                      () {
+                        // Add your onTap logic here
+                      },
                     ),
                     _buildDivider(),
                     _buildDrawerItem(
@@ -151,6 +168,9 @@ class DrawerScreen extends StatelessWidget {
                         color: AppColors.cFFFFFF,
                       ),
                       'Log Out',
+                      () {
+                        // Add your onTap logic here
+                      },
                     ),
                   ],
                 ),
@@ -172,8 +192,8 @@ class DrawerScreen extends StatelessWidget {
     );
   }
 
-  /// Updated Drawer Item Builder — accepts Widget icon
-  Widget _buildDrawerItem(Widget iconWidget, String title) {
+  /// Updated Drawer Item Builder — accepts Widget icon and VoidCallback onTap
+  Widget _buildDrawerItem(Widget iconWidget, String title, VoidCallback onTap) {
     return ListTile(
       contentPadding:
           EdgeInsets.symmetric(horizontal: UIHelper.kDefaulutPadding()),
@@ -193,9 +213,7 @@ class DrawerScreen extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
       ),
-      onTap: () {
-        // TODO: Add navigation logic here
-      },
+      onTap: onTap,
     );
   }
 
@@ -208,7 +226,7 @@ class DrawerScreen extends StatelessWidget {
       child: Divider(
         height: 1,
         thickness: 1,
-        color: AppColors.cEBEBEB, 
+        color: AppColors.cEBEBEB,
       ),
     );
   }

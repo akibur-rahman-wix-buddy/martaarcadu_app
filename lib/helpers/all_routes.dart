@@ -13,6 +13,7 @@ import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
+import 'package:martaarcadu_app/features/reliability/presentation/reliability_screen.dart';
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 import 'package:martaarcadu_app/features/seller_response/presentation/seller_response_screen.dart';
@@ -77,6 +78,7 @@ final class Routes {
   static const String requestDetailsScreen = '/request_details_screen';
   static const String sellerResponseScreen = '/seller_response_screen';
   static const String favoriteSellerScreen = '/favorite_seller_screen';
+  static const String reliabilityScreen = '/reliability_screen';
   
 }
 
@@ -153,7 +155,13 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: FavoriteSellerScreen(), settings: settings)
             : CupertinoPageRoute(
-                builder: (context) => FavoriteSellerScreen());                                        
+                builder: (context) => FavoriteSellerScreen());
+          case Routes.reliabilityScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: ReliabilityScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => ReliabilityScreen());                                                
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
