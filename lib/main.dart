@@ -11,11 +11,11 @@ import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_s
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
-import 'package:martaarcadu_app/features/reliability/presentation/reliability_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/reliability/presentation/reliability_screen.dart';
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 import 'package:martaarcadu_app/features/seller_response/presentation/seller_response_screen.dart';
-import 'package:martaarcadu_app/features/verify_identity/presentation/verifiy_identity_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/verify_identity/presentation/verifiy_identity_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
