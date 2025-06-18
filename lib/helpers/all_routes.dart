@@ -13,11 +13,14 @@ import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
-import 'package:martaarcadu_app/features/reliability/presentation/reliability_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/identity_thankyou/presentation/identity_thankyou_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/mobile_number_verify/presentation/mobile_number_verify_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/phone_number_verify/presentation/phone_number_otp_verify_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/reliability/presentation/reliability_screen.dart';
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 import 'package:martaarcadu_app/features/seller_response/presentation/seller_response_screen.dart';
-import 'package:martaarcadu_app/features/verify_identity/presentation/verifiy_identity_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/verify_identity/presentation/verifiy_identity_screen.dart';
 
 final class Routes {
   static final Routes _routes = Routes._internal();
@@ -81,7 +84,10 @@ final class Routes {
   static const String favoriteSellerScreen = '/favorite_seller_screen';
   static const String reliabilityScreen = '/reliability_screen';
   static const String verifyIdentityScreen = '/verify_identity_screen';
-  
+  static const String indentityThankyouScreen = '/identity_thankyou_screen';
+  static const String phoneNumberOtpVerityScreen =
+      '/phone_number_otp_verify_screen';
+  static const String mobileNumberVerifyScreen = '/mobile_number_verify_screen';
 }
 
 final class RouteGenerator {
@@ -144,32 +150,45 @@ final class RouteGenerator {
         return Platform.isAndroid
             ? _FadedTransitionRoute(
                 widget: RequestDetailsScreen(), settings: settings)
-            : CupertinoPageRoute(
-                builder: (context) => RequestDetailsScreen());
+            : CupertinoPageRoute(builder: (context) => RequestDetailsScreen());
       case Routes.sellerResponseScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
                 widget: SellerResponseScreen(), settings: settings)
-            : CupertinoPageRoute(
-                builder: (context) => SellerResponseScreen());
-            case Routes.favoriteSellerScreen:
+            : CupertinoPageRoute(builder: (context) => SellerResponseScreen());
+      case Routes.favoriteSellerScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
                 widget: FavoriteSellerScreen(), settings: settings)
-            : CupertinoPageRoute(
-                builder: (context) => FavoriteSellerScreen());
-          case Routes.reliabilityScreen:
+            : CupertinoPageRoute(builder: (context) => FavoriteSellerScreen());
+      case Routes.reliabilityScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
                 widget: ReliabilityScreen(), settings: settings)
-            : CupertinoPageRoute(
-                builder: (context) => ReliabilityScreen());
-           case Routes.verifyIdentityScreen:
+            : CupertinoPageRoute(builder: (context) => ReliabilityScreen());
+      case Routes.verifyIdentityScreen:
         return Platform.isAndroid
             ? _FadedTransitionRoute(
                 widget: VerifiyIdentityScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => VerifiyIdentityScreen());
+      case Routes.indentityThankyouScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: IdentityThankyouScreen(), settings: settings)
             : CupertinoPageRoute(
-                builder: (context) => VerifiyIdentityScreen());                                                          
+                builder: (context) => IdentityThankyouScreen());
+      case Routes.phoneNumberOtpVerityScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: PhoneNumberOtpVerifyScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => PhoneNumberOtpVerifyScreen());
+      case Routes.mobileNumberVerifyScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: MobileNumberVerifyScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => MobileNumberVerifyScreen());
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(
