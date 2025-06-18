@@ -11,6 +11,9 @@ import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_s
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/identity_thankyou/presentation/identity_thankyou_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/mobile_number_verify/presentation/mobile_number_verify_screen.dart';
+import 'package:martaarcadu_app/features/reliability_flow/phone_number_verify/presentation/phone_number_otp_verify_screen.dart';
 import 'package:martaarcadu_app/features/reliability_flow/reliability/presentation/reliability_screen.dart';
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';

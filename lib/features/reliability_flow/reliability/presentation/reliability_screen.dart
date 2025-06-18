@@ -64,22 +64,28 @@ class ReliabilityScreen extends StatelessWidget {
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
-                VerificationTitle(
-                  icon: Image.asset(
-                    Assets.icons.phoneIcon.path,
-                    height: 24.h,
-                    width: 24.w,
+                GestureDetector(
+                  onTap: () {
+                    NavigationService.navigateTo(
+                        Routes.mobileNumberVerifyScreen);
+                  },
+                  child: VerificationTitle(
+                    icon: Image.asset(
+                      Assets.icons.phoneIcon.path,
+                      height: 24.h,
+                      width: 24.w,
+                    ),
+                    title: 'Mobile Number',
+                    status: 'Verified',
+                    statusColor: AppColors.c16A34A,
+                    statusBgColor: AppColors.cDCFCE7,
+                    tileBgColor: AppColors.cF0FDF4,
+                    iconBgColor: AppColors.cDCFCE7,
+                    description:
+                        'Confirm your phone number to receive alerts and increase trust.',
+                    coinTextColor: AppColors.c16A34A,
+                    coinBgColor: AppColors.cDCFCE7,
                   ),
-                  title: 'Mobile Number',
-                  status: 'Verified',
-                  statusColor: AppColors.c16A34A,
-                  statusBgColor: AppColors.cDCFCE7,
-                  tileBgColor: AppColors.cF0FDF4,
-                  iconBgColor: AppColors.cDCFCE7,
-                  description:
-                      'Confirm your phone number to receive alerts and increase trust.',
-                  coinTextColor: AppColors.c16A34A,
-                  coinBgColor: AppColors.cDCFCE7,
                 ),
                 UIHelper.verticalSpace(16.h),
                 VerificationTitle(
