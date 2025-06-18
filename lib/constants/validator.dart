@@ -1,5 +1,6 @@
 /// Validates that the value is not empty.
-String? requiredValidator(String? value, {String message = 'This field is required'}) {
+String? requiredValidator(String? value,
+    {String message = 'This field is required'}) {
   if (value == null || value.trim().isEmpty) {
     return message;
   }
@@ -9,6 +10,10 @@ String? requiredValidator(String? value, {String message = 'This field is requir
 /// Validates that the value is a valid name.
 String? nameValidator(String? value) {
   return requiredValidator(value, message: 'Please enter your name');
+}
+
+String? informationValidator(String? value) {
+  return requiredValidator(value, message: 'Please enter your information');
 }
 
 /// Validates a proper email format.

@@ -6,6 +6,8 @@ import 'package:martaarcadu_app/features/reliability/presentation/widgets/trust_
 import 'package:martaarcadu_app/features/reliability/presentation/widgets/verification_title.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class ReliabilityScreen extends StatelessWidget {
@@ -40,21 +42,26 @@ class ReliabilityScreen extends StatelessWidget {
                 UIHelper.verticalSpace(20.h),
                 TrustScoreCard(),
                 UIHelper.verticalSpace(32.h),
-                VerificationTitle(
-                  icon: Image.asset(
-                    Assets.icons.reabilityPersonIcon.path,
-                    height: 24.h,
-                    width: 24.w,
+                GestureDetector(
+                  onTap: () {
+                    NavigationService.navigateTo(Routes.verifyIdentityScreen);
+                  },
+                  child: VerificationTitle(
+                    icon: Image.asset(
+                      Assets.icons.reabilityPersonIcon.path,
+                      height: 24.h,
+                      width: 24.w,
+                    ),
+                    title: 'Identity Verified',
+                    status: 'Pending',
+                    statusColor: AppColors.cEA7B0C,
+                    statusBgColor: AppColors.cFFF1DF,
+                    tileBgColor: AppColors.cFFFFFF,
+                    description:
+                        'Upload a valid government ID to verify your identity.',
+                    coinTextColor: AppColors.c6B7280,
+                    coinBgColor: AppColors.cF3F4F6,
                   ),
-                  title: 'Identity Verified',
-                  status: 'Pending',
-                  statusColor: AppColors.cEA7B0C,
-                  statusBgColor: AppColors.cFFF1DF,
-                  tileBgColor: AppColors.cFFFFFF,
-                  description:
-                      'Upload a valid government ID to verify your identity.',
-                  coinTextColor: AppColors.c6B7280,
-                  coinBgColor: AppColors.cF3F4F6,
                 ),
                 UIHelper.verticalSpace(16.h),
                 VerificationTitle(
