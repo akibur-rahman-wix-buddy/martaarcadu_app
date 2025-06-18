@@ -165,6 +165,10 @@ class $AssetsIconsGen {
   AssetGenImage get termsIcon =>
       const AssetGenImage('assets/icons/terms_icon.png');
 
+  /// File path: assets/icons/upload_file_icon.png
+  AssetGenImage get uploadFileIcon =>
+      const AssetGenImage('assets/icons/upload_file_icon.png');
+
   /// File path: assets/icons/whatsapp_icon.png
   AssetGenImage get whatsappIcon =>
       const AssetGenImage('assets/icons/whatsapp_icon.png');
@@ -209,6 +213,7 @@ class $AssetsIconsGen {
     seetingIcon,
     sendIcon,
     termsIcon,
+    uploadFileIcon,
     whatsappIcon,
   ];
 }

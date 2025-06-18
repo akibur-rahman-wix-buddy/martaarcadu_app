@@ -15,6 +15,7 @@ import 'package:martaarcadu_app/features/reliability/presentation/reliability_sc
 import 'package:martaarcadu_app/features/request_details/presentation/request_details_screen.dart';
 import 'package:martaarcadu_app/features/request_sucess/presentation/request_sucessfully_screen.dart';
 import 'package:martaarcadu_app/features/seller_response/presentation/seller_response_screen.dart';
+import 'package:martaarcadu_app/features/verify_identity/presentation/verifiy_identity_screen.dart';
 import 'constants/custome_theme.dart';
 import 'gen/colors.gen.dart';
 import 'helpers/all_routes.dart';
