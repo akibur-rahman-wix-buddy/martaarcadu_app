@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-#323232
+c191919
 <color name="cFFFFFF">#FFFFFFFF</color>
     <color name="c3D3D3D">#FF3D3D3D</color>
     <color name="allPrimaryColor">#FF3B82F6</color>
     <color name="c000000">#FF000000</color>
+     <color name="c191919">#FF191919</color>
+    <color name="cDBDBDB">#FFDBDBDB</color>
+    <color name="cE5E7EB">#FFE5E7EB</color>
     <color name="c323232">#FF323232</color>
     <color name="cF0FDF4">#FFF0FDF4</color>
     <color name="c6A6A6A">#FF6A6A6A</color>

@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:martaarcadu_app/constants/text_font_style.dart';
 import 'package:martaarcadu_app/gen/assets.gen.dart';
 import 'package:martaarcadu_app/gen/colors.gen.dart';
+import 'package:martaarcadu_app/helpers/all_routes.dart';
+import 'package:martaarcadu_app/helpers/navigation_service.dart';
 import 'package:martaarcadu_app/helpers/ui_helpers.dart';
 
 class HeaderTopBar extends StatelessWidget {
@@ -85,32 +87,37 @@ class HeaderTopBar extends StatelessWidget {
               ),
             ),
             UIHelper.horizontalSpace(12.w),
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Image.asset(
-                  Assets.icons.notificationBellIcon.path,
-                  height: 26.h,
-                  width: 26.w,
-                ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  child: Container(
-                    width: 10.w,
-                    height: 10.w,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFF3B30), // vibrant red
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color:
-                            Colors.white, // optional white border for clarity
-                        width: 1.w,
+            GestureDetector(
+              onTap: () {
+                NavigationService.navigateTo(
+                    Routes.notificationScreen); // or use Get.to(...)
+              },
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Image.asset(
+                    Assets.icons.notificationBellIcon.path,
+                    height: 26.h,
+                    width: 26.w,
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      width: 10.w,
+                      height: 10.w,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFF3B30),
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1.w,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         )

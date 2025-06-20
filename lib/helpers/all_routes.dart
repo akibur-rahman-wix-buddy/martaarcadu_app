@@ -12,6 +12,8 @@ import 'package:martaarcadu_app/features/auth/new_password/presentation/new_pass
 import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify_screen.dart';
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
+import 'package:martaarcadu_app/features/notification_flow/notification/presentation/notification_screen.dart';
+import 'package:martaarcadu_app/features/notification_flow/notification_settings/presentation/notification_settings_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
 import 'package:martaarcadu_app/features/reliability_flow/identity_thankyou/presentation/identity_thankyou_screen.dart';
 import 'package:martaarcadu_app/features/reliability_flow/mobile_number_verify/presentation/mobile_number_verify_screen.dart';
@@ -88,6 +90,9 @@ final class Routes {
   static const String phoneNumberOtpVerityScreen =
       '/phone_number_otp_verify_screen';
   static const String mobileNumberVerifyScreen = '/mobile_number_verify_screen';
+  static const String notificationSettingsScreen =
+      '/notification_settings_screen';
+  static const String notificationScreen = '/notification_screen';
 }
 
 final class RouteGenerator {
@@ -189,6 +194,17 @@ final class RouteGenerator {
                 widget: MobileNumberVerifyScreen(), settings: settings)
             : CupertinoPageRoute(
                 builder: (context) => MobileNumberVerifyScreen());
+      case Routes.notificationSettingsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: NotificationSettingsScreen(), settings: settings)
+            : CupertinoPageRoute(
+                builder: (context) => NotificationSettingsScreen());
+      case Routes.notificationScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: NotificationScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => NotificationScreen());
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(

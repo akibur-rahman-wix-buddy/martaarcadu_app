@@ -10,6 +10,8 @@ import 'package:martaarcadu_app/features/deals/presentation/deals_screen.dart';
 import 'package:martaarcadu_app/features/drawer/presentation/drawer_screen.dart';
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
+import 'package:martaarcadu_app/features/notification_flow/notification/presentation/notification_screen.dart';
+import 'package:martaarcadu_app/features/notification_flow/notification_settings/presentation/notification_settings_screen.dart';
 import 'package:martaarcadu_app/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
 import 'package:martaarcadu_app/features/reliability_flow/identity_thankyou/presentation/identity_thankyou_screen.dart';
@@ -98,7 +100,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: DealsScreen(),
+            home: HomeScreen(),
           ),
         );
       },
