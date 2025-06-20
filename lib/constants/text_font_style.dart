@@ -323,4 +323,10 @@ class TextFontStyle {
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
   );
+
+  static var textStylec14cE31B1BManropeW500;
+
+  static var textStylec12c7C7C7CManropeW400;
+
+  static var textStylec10cAFAFAFManropeW400;
 } 

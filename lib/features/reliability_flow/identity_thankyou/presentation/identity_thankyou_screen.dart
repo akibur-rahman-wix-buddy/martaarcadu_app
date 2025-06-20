@@ -60,7 +60,7 @@ class IdentityThankyouScreen extends StatelessWidget {
                 'Your identity details have been submitted. Our team will review them shortly. You\'ll be notified once verified.',
                 textAlign: TextAlign.center, 
                 style: TextFontStyle.textStylec14c141414ManropeW500.copyWith(
-                  color: AppColors.cc323232,
+                  color: AppColors.c323232,
                   fontSize: 14.sp, 
                   height: 1.5, 
                 ),
