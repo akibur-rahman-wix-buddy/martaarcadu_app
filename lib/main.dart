@@ -6,6 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:martaarcadu_app/features/account/create_account/presentation/create_account_screen.dart';
 
 import 'package:martaarcadu_app/features/auth/login/presentation/login_screen.dart';
+import 'package:martaarcadu_app/features/deals/presentation/deals_screen.dart';
 import 'package:martaarcadu_app/features/drawer/presentation/drawer_screen.dart';
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
@@ -97,7 +98,7 @@ class UtillScreenMobile extends StatelessWidget {
             },
             navigatorKey: NavigationService.navigatorKey,
             onGenerateRoute: RouteGenerator.generateRoute,
-            home: HomeScreen(),
+            home: DealsScreen(),
           ),
         );
       },
