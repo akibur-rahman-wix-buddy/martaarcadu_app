@@ -12,6 +12,7 @@ import 'package:martaarcadu_app/features/auth/new_password/presentation/new_pass
 import 'package:martaarcadu_app/features/auth/otp_verify/presentation/otp_verify_screen.dart';
 import 'package:martaarcadu_app/features/favorite_seller/presentation/favorite_seller_screen.dart';
 import 'package:martaarcadu_app/features/home/presentation/home_screen.dart';
+import 'package:martaarcadu_app/features/message_flow/chat_details/presentation/chat_details_screen.dart';
 import 'package:martaarcadu_app/features/notification_flow/notification/presentation/notification_screen.dart';
 import 'package:martaarcadu_app/features/notification_flow/notification_settings/presentation/notification_settings_screen.dart';
 import 'package:martaarcadu_app/features/post_request/presentation/post_request_screen.dart';
@@ -93,6 +94,7 @@ final class Routes {
   static const String notificationSettingsScreen =
       '/notification_settings_screen';
   static const String notificationScreen = '/notification_screen';
+  static const String chatDetailsScreen = '/chat_details_screen';
 }
 
 final class RouteGenerator {
@@ -205,6 +207,11 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: NotificationScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => NotificationScreen());
+      case Routes.chatDetailsScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget:ChatDetailsScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => ChatDetailsScreen());      
       // // case Routes.categorySearchScreen:
       // //   return Platform.isAndroid
       // //       ? _FadedTransitionRoute(

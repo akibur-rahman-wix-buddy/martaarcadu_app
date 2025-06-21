@@ -161,6 +161,10 @@ class $AssetsIconsGen {
   AssetGenImage get sendIcon =>
       const AssetGenImage('assets/icons/send_icon.png');
 
+  /// File path: assets/icons/star_icon.png
+  AssetGenImage get starIcon =>
+      const AssetGenImage('assets/icons/star_icon.png');
+
   /// File path: assets/icons/terms_icon.png
   AssetGenImage get termsIcon =>
       const AssetGenImage('assets/icons/terms_icon.png');
@@ -212,6 +216,7 @@ class $AssetsIconsGen {
     responseSellerScreenMapIcon,
     seetingIcon,
     sendIcon,
+    starIcon,
     termsIcon,
     uploadFileIcon,
     whatsappIcon,
@@ -220,6 +225,10 @@ class $AssetsIconsGen {
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/chat_details_screen_image.png
+  AssetGenImage get chatDetailsScreenImage =>
+      const AssetGenImage('assets/images/chat_details_screen_image.png');
 
   /// File path: assets/images/close_request_screen_image.png
   AssetGenImage get closeRequestScreenImage =>
@@ -245,13 +254,9 @@ class $AssetsImagesGen {
   AssetGenImage get homeScreenProductImage1 =>
       const AssetGenImage('assets/images/home_screen_product_image1.png');
 
-  /// File path: assets/images/message_screen_image1.png
-  AssetGenImage get messageScreenImage1 =>
-      const AssetGenImage('assets/images/message_screen_image1.png');
-
-  /// File path: assets/images/message_screen_image2.png
-  AssetGenImage get messageScreenImage2 =>
-      const AssetGenImage('assets/images/message_screen_image2.png');
+  /// File path: assets/images/message_screen_image.png
+  AssetGenImage get messageScreenImage =>
+      const AssetGenImage('assets/images/message_screen_image.png');
 
   /// File path: assets/images/onboarding_screen_image1.png
   AssetGenImage get onboardingScreenImage1 =>
@@ -304,14 +309,14 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+    chatDetailsScreenImage,
     closeRequestScreenImage,
     coainImage,
     drawerProfileImage,
     favoriteScreenImage1,
     favoriteSellerScreenImage2,
     homeScreenProductImage1,
-    messageScreenImage1,
-    messageScreenImage2,
+    messageScreenImage,
     onboardingScreenImage1,
     onboardingScreenImage2,
     onboardingScreenImage3,
